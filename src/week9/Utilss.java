@@ -2,7 +2,7 @@ package week9;
 
 import java.io.*;
 
-public class Utils {
+public class Utilss {
     public static String readContentFromFile(String path) throws IOException {
         String s = new String();
         File file = new File(path);
@@ -14,7 +14,7 @@ public class Utils {
         }
         catch (IOException e) {
             e.printStackTrace();
-    }
+        }
         return s;
     }
     public static void writeContentToFile(String path) throws IOException {
@@ -50,9 +50,9 @@ public class Utils {
         }
     }
     public static void main (String[] args) throws IOException{
-        System.out.println(readContentFromFile("oop.txt"));
-        writeContentToFile("oop.txt");
-        System.out.println(readContentFromFile("oop.txt"));
-        findFileByName("C:\\Users\\VX15\\IdeaProjects\\oop2018", "oop.txt");
+        System.out.println(readContentFromFile("son.txt"));
+        writeContentToFile("son.txt");
+        System.out.println(readContentFromFile("son.txt"));
+        findFileByName("C:\\Users\\DELL\\Desktop\\oop2018", "son.txt");
     }
 }
