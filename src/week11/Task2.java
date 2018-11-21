@@ -1,51 +1,54 @@
-//package week11;
-//
-//public class Task2 {
-//    public static <S extends Comparable> void sapxep(S[] n){
-//        int m =n.length;
-//        for(int i=0;i<m;i++){
-//            for(int j=0;j<m-1;j++){
-//                if(n[j].compareTo(n[j+1])>0){
-//                    S s= n[j];
-//                    n[j]=n[j+1];
-//                    n[j+1]=s;
-//                }
-//            }
-//        }
-//    }
-//    public static <S extends Comparable> void in(S[] n){
-//        int m =n.length;
-//        for(int i=0;i<m;i++){
-//            System.out.println("Sap xep nhu sau: ");
-//            System.out.println(n[m]);
-//        }
-//        System.out.println("\n\n");
-//    }
-//
-//    public static void main(String[] args){
-//        Character[] data1= {'w','s','a','i','h'};
-//        Integer[] data2= {3,2,647,444,33};
-//        Float[] data3={1.1F,44F,63.2F,3.5F};
-//        Byte[] data4={-4,44,2,-6};
-//        Short[] data5={235,111,3433,99};
-//        Long[] data6={44L,22L,32L};
-//        Double[] data7={23.3,32.1,53.5,55.2};
-//        sapxep(data1);
-//        in(data1);
-//        sapxep(data2);
-//        in(data2);
-//        sapxep(data3);
-//        in(data3);
-//        sapxep(data4);
-//        in(data4);
-//        sapxep(data5);
-//        in(data5);
-//        sapxep(data6);
-//        in(data6);
-//        sapxep(data7);
-//        in(data7);
-////    sapxep(data1);
-////    in(data1);
-//
-//    }
-//}
+package week11;
+
+import java.util.ArrayList;
+
+public class Task2 {
+    public static <S extends Comparable> S max(ArrayList<S> n){
+        S max = n.get(0);
+        for(int i=0;i<n.size();i++){
+            if(max.compareTo(n.get(i))<0){
+                max = n.get(i);
+            }
+        }
+        return max;
+    }
+    public static void main(String[] args){
+        ArrayList<Character> a = new ArrayList<Character>();
+        a.add(0,'w');
+        a.add(1,'i');
+        a.add(2,'s');
+        System.out.println(max(a)+"\n");
+        ArrayList<Integer> b = new ArrayList<Integer>();
+        b.add(0,33);
+        b.add(1,-10);
+        b.add(2,0);
+        System.out.println(max(b)+"\n");
+        ArrayList<Byte> c = new ArrayList<Byte>();
+        c.add(0, (byte) -18);
+        c.add(1,(byte) 50);
+        c.add(2,(byte) 17);
+        System.out.println(max(c)+"\n");
+        ArrayList<Short> d = new ArrayList<Short>();
+        d.add(0, (short) -2222);
+        d.add(1,(short) 111);
+        d.add(2,(short) 2);
+        System.out.println(max(d)+"\n");
+        ArrayList<Long> e = new ArrayList<Long>();
+        e.add(0, (long) 12L);
+        e.add(1,(long) -4L);
+        e.add(2,(long) 9L);
+        System.out.println(max(e)+"\n");
+        ArrayList<Float> f = new ArrayList<Float>();
+        f.add(0,90.2f);
+        f.add(1,3.45f);
+        f.add(2,-6.67f);
+        System.out.println(max(f)+"\n");
+        ArrayList<Double> g = new ArrayList<Double>();
+        g.add(0,32.33d);
+        g.add(1,1.567d);
+        g.add(2,11.4d);
+        System.out.println(max(g)+"\n");
+
+
+    }
+}
